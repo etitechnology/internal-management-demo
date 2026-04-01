@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/ETI_icon.png"/>
+<link rel="apple-touch-icon" href="/ETI_icon.png"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Job Status Lookup | Coastal Restoration Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<style>body{font-family:'Inter',system-ui,sans-serif;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+<nav class="bg-slate-700 text-white shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="flex justify-between items-center h-16">
+    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400" style="font-variation-settings:'FILL' 1;">water_damage</span><span class="font-bold text-lg tracking-tight">Coastal Restoration Services</span></div>
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="./" class="text-slate-300 hover:text-white">Book Service</a>
+      <a href="status" class="text-white border-b-2 border-green-400 pb-1">Job Status</a>
+      <a href="portal-dashboard" class="text-slate-300 hover:text-white">My Portal</a>
+      <a href="login" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg">Login</a>
+    </div>
+  </div></div>
+</nav>
+
+<main class="max-w-4xl mx-auto px-4 py-10">
+  <div class="text-center mb-10">
+    <h1 class="text-3xl font-extrabold text-slate-800 mb-2">Track Your Job</h1>
+    <p class="text-slate-500 text-lg">Enter your reference number or email to check the status of your restoration project.</p>
+  </div>
+
+  <div class="bg-white rounded-xl p-8 shadow-sm border border-slate-200 mb-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+      <div><label class="block text-sm font-medium text-slate-600 mb-1">Job Reference #</label><input type="text" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-green-500" value="JOB-4501"/></div>
+      <div><label class="block text-sm font-medium text-slate-600 mb-1">or Email Address</label><input type="email" class="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-green-500" placeholder="john@example.com"/></div>
+      <div><button class="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-bold"><span class="flex items-center justify-center gap-2"><span class="material-symbols-outlined">search</span> Look Up</span></button></div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+    <div class="bg-slate-700 text-white p-6">
+      <div class="flex justify-between items-start flex-wrap gap-3">
+        <div><div class="text-sm text-slate-300 mb-1">Job Reference</div><div class="text-2xl font-extrabold">JOB-4501</div><div class="text-slate-300 mt-1">Henderson Family &mdash; Water Damage Restoration</div></div>
+        <div class="bg-yellow-500 text-yellow-900 px-4 py-2 rounded-lg font-bold text-sm">In Progress</div>
+      </div>
+    </div>
+
+    <div class="p-6">
+      <h3 class="font-bold text-lg mb-6">Job Timeline</h3>
+      <div class="relative">
+        <div class="absolute left-5 top-0 bottom-0 w-0.5 bg-slate-200"></div>
+        <div class="relative flex items-start gap-4 mb-8">
+          <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center z-10 flex-shrink-0"><span class="material-symbols-outlined text-lg" style="font-variation-settings:'FILL' 1;">check_circle</span></div>
+          <div class="pt-1"><div class="font-semibold">Service Request Received</div><div class="text-sm text-slate-500">Mar 27, 2026 at 9:15 AM</div><div class="text-sm text-slate-600 mt-1">Emergency water damage from burst pipe in master bathroom.</div></div>
+        </div>
+        <div class="relative flex items-start gap-4 mb-8">
+          <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center z-10 flex-shrink-0"><span class="material-symbols-outlined text-lg" style="font-variation-settings:'FILL' 1;">check_circle</span></div>
+          <div class="pt-1"><div class="font-semibold">Assessment Completed</div><div class="text-sm text-slate-500">Mar 27, 2026 at 2:30 PM</div><div class="text-sm text-slate-600 mt-1">Jake Sullivan completed on-site assessment. Moisture readings taken. Insurance claim filed with State Farm.</div></div>
+        </div>
+        <div class="relative flex items-start gap-4 mb-8">
+          <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center z-10 flex-shrink-0"><span class="material-symbols-outlined text-lg" style="font-variation-settings:'FILL' 1;">check_circle</span></div>
+          <div class="pt-1"><div class="font-semibold">Work Started</div><div class="text-sm text-slate-500">Mar 28, 2026 at 8:00 AM</div><div class="text-sm text-slate-600 mt-1">Water extraction complete. 6 dehumidifiers and 4 air movers placed. Antimicrobial treatment applied.</div></div>
+        </div>
+        <div class="relative flex items-start gap-4 mb-8">
+          <div class="w-10 h-10 rounded-full bg-yellow-500 text-yellow-900 flex items-center justify-center z-10 flex-shrink-0"><span class="material-symbols-outlined text-lg">pending</span></div>
+          <div class="pt-1"><div class="font-semibold text-yellow-700">Drying & Monitoring (In Progress)</div><div class="text-sm text-slate-500">Mar 29-31, 2026</div><div class="text-sm text-slate-600 mt-1">Daily moisture readings. Current: bathroom 42% (target &lt;15%), hallway 28%, bedroom 22%.</div></div>
+        </div>
+        <div class="relative flex items-start gap-4 mb-8">
+          <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-400 flex items-center justify-center z-10 flex-shrink-0"><span class="material-symbols-outlined text-lg">circle</span></div>
+          <div class="pt-1 text-slate-400"><div class="font-semibold">Final Inspection</div><div class="text-sm">Est. Mar 31, 2026</div></div>
+        </div>
+        <div class="relative flex items-start gap-4">
+          <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-400 flex items-center justify-center z-10 flex-shrink-0"><span class="material-symbols-outlined text-lg">circle</span></div>
+          <div class="pt-1 text-slate-400"><div class="font-semibold">Job Complete & Invoice</div><div class="text-sm">Pending</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-200 p-6">
+      <h3 class="font-bold text-lg mb-4">Job Details</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-slate-50 rounded-lg p-4"><div class="text-xs text-slate-500 uppercase font-medium">Location</div><div class="font-semibold mt-1">1847 Oak St, Anaheim</div></div>
+        <div class="bg-slate-50 rounded-lg p-4"><div class="text-xs text-slate-500 uppercase font-medium">Lead Tech</div><div class="font-semibold mt-1">Jake Sullivan</div></div>
+        <div class="bg-slate-50 rounded-lg p-4"><div class="text-xs text-slate-500 uppercase font-medium">Schedule</div><div class="font-semibold mt-1">Mar 28 - 31</div></div>
+        <div class="bg-slate-50 rounded-lg p-4"><div class="text-xs text-slate-500 uppercase font-medium">Est. Cost</div><div class="font-semibold mt-1">$5,200</div></div>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-200 p-6 bg-slate-50 flex flex-wrap gap-3">
+      <a href="portal-detail" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg font-medium text-sm">View Full Details</a>
+      <button class="bg-white border border-slate-200 text-slate-700 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-100 text-sm">Download Report</button>
+      <button class="bg-white border border-slate-200 text-slate-700 px-5 py-2.5 rounded-lg font-medium hover:bg-slate-100 text-sm">Contact Crew</button>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-slate-800 text-slate-400 py-8 mt-16">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400" style="font-variation-settings:'FILL' 1;">water_damage</span><span class="font-bold text-white">Coastal Restoration Services</span></div>
+    <div class="text-sm">Serving Orange County, CA | Licensed & Insured | IICRC Certified</div>
+    <div class="text-sm">Powered by <span class="text-green-400 font-semibold">ETI Technology</span></div>
+  </div>
+</footer>
+</body></html>
