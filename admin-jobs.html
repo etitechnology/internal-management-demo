@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jobs List | Coastal Restoration Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<style>body{font-family:'Inter',system-ui,sans-serif;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<nav class="bg-slate-800 text-white shadow-lg fixed top-0 w-full z-50">
+  <div class="px-4 sm:px-6"><div class="flex justify-between items-center h-14">
+    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400" style="font-variation-settings:'FILL' 1;">water_damage</span><span class="font-bold text-lg tracking-tight">Coastal Restoration</span><span class="text-xs bg-green-600 px-2 py-0.5 rounded-full ml-2 font-medium">ADMIN</span></div>
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="text-slate-400 hover:text-white text-sm">Public Site</a>
+      <button class="relative p-2 text-slate-400 hover:text-white"><span class="material-symbols-outlined">notifications</span></button>
+      <div class="flex items-center gap-2 ml-2 pl-4 border-l border-slate-600"><div class="w-8 h-8 bg-slate-600 rounded-full flex items-center justify-center text-sm font-bold">MB</div></div>
+    </div>
+  </div></div>
+</nav>
+<div class="flex pt-14">
+  <aside class="w-56 bg-slate-800 text-slate-300 min-h-screen fixed left-0 top-14 overflow-y-auto pb-8">
+    <nav class="p-3 space-y-1 text-sm">
+      <a href="admin-home.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">dashboard</span>Dashboard</a>
+      <a href="admin-kanban.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">view_kanban</span>Job Board</a>
+      <a href="admin-jobs.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-slate-700 text-white font-medium"><span class="material-symbols-outlined text-lg">list_alt</span>Jobs List</a>
+      <a href="admin-job-detail.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">assignment</span>Job Detail</a>
+      <a href="admin-crew.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">groups</span>Crew</a>
+      <a href="admin-equipment.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">handyman</span>Equipment</a>
+      <a href="admin-calendar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">calendar_month</span>Calendar</a>
+      <a href="admin-analytics.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">analytics</span>Analytics</a>
+    </nav>
+  </aside>
+
+  <main class="ml-56 flex-1 p-6 min-h-screen">
+    <div class="flex justify-between items-center mb-6">
+      <div><h1 class="text-2xl font-extrabold">All Jobs</h1><p class="text-slate-500 text-sm">21 total jobs &bull; Showing all</p></div>
+      <div class="flex gap-2">
+        <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-1"><span class="material-symbols-outlined text-lg">add</span> New Job</button>
+        <a href="admin-kanban.html" class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-100 flex items-center gap-1"><span class="material-symbols-outlined text-lg">view_kanban</span> Board</a>
+        <button class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-100 flex items-center gap-1"><span class="material-symbols-outlined text-lg">download</span> Export</button>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white rounded-xl p-4 shadow-sm border border-slate-200 mb-4 flex flex-wrap gap-3 items-center">
+      <input type="text" class="px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-sm w-48" placeholder="Search jobs..."/>
+      <select class="px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-sm"><option>All Statuses</option><option>Unassigned</option><option>Scheduled</option><option>Dispatched</option><option>In Progress</option><option>Completed</option><option>Invoiced</option></select>
+      <select class="px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-sm"><option>All Service Types</option><option>Water Damage</option><option>Fire & Smoke</option><option>Mold Remediation</option><option>Emergency Board-Up</option><option>Contents Cleaning</option><option>Structural Drying</option></select>
+      <select class="px-3 py-2 rounded-lg bg-slate-50 border border-slate-200 text-sm"><option>All Crews</option><option>Jake Sullivan</option><option>Chris Park</option><option>Luis Ortega</option><option>Full Crew</option></select>
+      <button class="text-sm text-green-600 font-medium hover:underline ml-auto">Clear Filters</button>
+    </div>
+
+    <!-- Table -->
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-50 border-b border-slate-200">
+            <tr>
+              <th class="text-left px-4 py-3 font-semibold text-slate-600"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></th>
+              <th class="text-left px-4 py-3 font-semibold text-slate-600 cursor-pointer hover:text-slate-800">Job # <span class="material-symbols-outlined text-xs align-middle">unfold_more</span></th>
+              <th class="text-left px-4 py-3 font-semibold text-slate-600">Client</th>
+              <th class="text-left px-4 py-3 font-semibold text-slate-600">Service</th>
+              <th class="text-left px-4 py-3 font-semibold text-slate-600">Location</th>
+              <th class="text-left px-4 py-3 font-semibold text-slate-600">Crew</th>
+              <th class="text-left px-4 py-3 font-semibold text-slate-600">Scheduled</th>
+              <th class="text-left px-4 py-3 font-semibold text-slate-600">Status</th>
+              <th class="text-right px-4 py-3 font-semibold text-slate-600">Revenue</th>
+              <th class="text-left px-4 py-3 font-semibold text-slate-600"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-100 hover:bg-slate-50 bg-red-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4519</td><td class="px-4 py-3">&mdash;</td><td class="px-4 py-3">&mdash;</td><td class="px-4 py-3">&mdash;</td><td class="px-4 py-3">&mdash;</td><td class="px-4 py-3">&mdash;</td>
+              <td class="px-4 py-3"><span class="bg-red-100 text-red-700 px-2 py-0.5 rounded-full text-xs font-semibold">Unassigned</span></td>
+              <td class="px-4 py-3 text-right">&mdash;</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50 bg-red-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4520</td><td class="px-4 py-3">Lakeside Apts</td><td class="px-4 py-3">Water Damage</td><td class="px-4 py-3 text-slate-500">Lake Forest</td><td class="px-4 py-3">&mdash;</td><td class="px-4 py-3">TBD</td>
+              <td class="px-4 py-3"><span class="bg-red-100 text-red-700 px-2 py-0.5 rounded-full text-xs font-semibold">Unassigned</span></td>
+              <td class="px-4 py-3 text-right">Est. $5,500</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50 bg-red-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4521</td><td class="px-4 py-3">Rose Garden HOA</td><td class="px-4 py-3">Mold Remediation</td><td class="px-4 py-3 text-slate-500">Mission Viejo</td><td class="px-4 py-3">&mdash;</td><td class="px-4 py-3">TBD</td>
+              <td class="px-4 py-3"><span class="bg-red-100 text-red-700 px-2 py-0.5 rounded-full text-xs font-semibold">Unassigned</span></td>
+              <td class="px-4 py-3 text-right">Est. $3,600</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4501</td><td class="px-4 py-3">Henderson Family</td><td class="px-4 py-3">Water Damage</td><td class="px-4 py-3 text-slate-500">Anaheim</td><td class="px-4 py-3">Jake Sullivan</td><td class="px-4 py-3">Mar 28-31</td>
+              <td class="px-4 py-3"><span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full text-xs font-semibold">In Progress</span></td>
+              <td class="px-4 py-3 text-right font-medium">$5,200</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4502</td><td class="px-4 py-3">Coastal Cafe LLC</td><td class="px-4 py-3">Fire & Smoke</td><td class="px-4 py-3 text-slate-500">Costa Mesa</td><td class="px-4 py-3">Chris Park, Luis Ortega</td><td class="px-4 py-3">Mar 25-Apr 3</td>
+              <td class="px-4 py-3"><span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full text-xs font-semibold">In Progress</span></td>
+              <td class="px-4 py-3 text-right font-medium">$9,800</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4507</td><td class="px-4 py-3">Mike Torres</td><td class="px-4 py-3">Structural Drying</td><td class="px-4 py-3 text-slate-500">Fullerton</td><td class="px-4 py-3">Luis Ortega</td><td class="px-4 py-3">Mar 29-31</td>
+              <td class="px-4 py-3"><span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full text-xs font-semibold">In Progress</span></td>
+              <td class="px-4 py-3 text-right font-medium">$2,400</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4504</td><td class="px-4 py-3">Sarah Mitchell</td><td class="px-4 py-3">Emergency Board-Up</td><td class="px-4 py-3 text-slate-500">Huntington Beach</td><td class="px-4 py-3">Luis Ortega</td><td class="px-4 py-3">Mar 31</td>
+              <td class="px-4 py-3"><span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full text-xs font-semibold">Dispatched</span></td>
+              <td class="px-4 py-3 text-right font-medium">$1,400</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4503</td><td class="px-4 py-3">Pacific Properties</td><td class="px-4 py-3">Mold Remediation</td><td class="px-4 py-3 text-slate-500">Irvine</td><td class="px-4 py-3">Jake Sullivan</td><td class="px-4 py-3">Apr 1-3</td>
+              <td class="px-4 py-3"><span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-semibold">Scheduled</span></td>
+              <td class="px-4 py-3 text-right font-medium">$3,200</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4505</td><td class="px-4 py-3">Oceanview HOA</td><td class="px-4 py-3">Water Damage</td><td class="px-4 py-3 text-slate-500">Newport Beach</td><td class="px-4 py-3">Chris Park</td><td class="px-4 py-3">Apr 2-5</td>
+              <td class="px-4 py-3"><span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-semibold">Scheduled</span></td>
+              <td class="px-4 py-3 text-right font-medium">$6,100</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4506</td><td class="px-4 py-3">Dr. Nguyen Office</td><td class="px-4 py-3">Contents Cleaning</td><td class="px-4 py-3 text-slate-500">Irvine</td><td class="px-4 py-3">Jake Sullivan</td><td class="px-4 py-3">Apr 3-4</td>
+              <td class="px-4 py-3"><span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-semibold">Scheduled</span></td>
+              <td class="px-4 py-3 text-right font-medium">$2,600</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4508</td><td class="px-4 py-3">Brightfield Apts</td><td class="px-4 py-3">Water Damage</td><td class="px-4 py-3 text-slate-500">Anaheim</td><td class="px-4 py-3">Chris Park, Jake Sullivan</td><td class="px-4 py-3">Apr 4-8</td>
+              <td class="px-4 py-3"><span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-semibold">Scheduled</span></td>
+              <td class="px-4 py-3 text-right font-medium">$7,500</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4509</td><td class="px-4 py-3">Kim Residence</td><td class="px-4 py-3">Mold Remediation</td><td class="px-4 py-3 text-slate-500">Mission Viejo</td><td class="px-4 py-3">Luis Ortega</td><td class="px-4 py-3">Apr 5-7</td>
+              <td class="px-4 py-3"><span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-semibold">Scheduled</span></td>
+              <td class="px-4 py-3 text-right font-medium">$3,800</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4510</td><td class="px-4 py-3">Summit Logistics</td><td class="px-4 py-3">Fire & Smoke</td><td class="px-4 py-3 text-slate-500">Anaheim</td><td class="px-4 py-3">Full Crew</td><td class="px-4 py-3">Apr 7-17</td>
+              <td class="px-4 py-3"><span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full text-xs font-semibold">Scheduled</span></td>
+              <td class="px-4 py-3 text-right font-medium">$12,500</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50 bg-green-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4511</td><td class="px-4 py-3">Green Valley HOA</td><td class="px-4 py-3">Structural Drying</td><td class="px-4 py-3 text-slate-500">Lake Forest</td><td class="px-4 py-3">Jake Sullivan</td><td class="px-4 py-3">Mar 27-29</td>
+              <td class="px-4 py-3"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-semibold">Completed</span></td>
+              <td class="px-4 py-3 text-right font-medium">$1,900</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50 bg-green-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4512</td><td class="px-4 py-3">Anderson Home</td><td class="px-4 py-3">Water Damage</td><td class="px-4 py-3 text-slate-500">Costa Mesa</td><td class="px-4 py-3">Chris Park</td><td class="px-4 py-3">Mar 25-28</td>
+              <td class="px-4 py-3"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-semibold">Completed</span></td>
+              <td class="px-4 py-3 text-right font-medium">$4,600</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50 bg-green-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4513</td><td class="px-4 py-3">Patel Residence</td><td class="px-4 py-3">Contents Cleaning</td><td class="px-4 py-3 text-slate-500">Costa Mesa</td><td class="px-4 py-3">Luis Ortega</td><td class="px-4 py-3">Mar 26-27</td>
+              <td class="px-4 py-3"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-semibold">Completed</span></td>
+              <td class="px-4 py-3 text-right font-medium">$2,200</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50 bg-green-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4514</td><td class="px-4 py-3">Harbor District LLC</td><td class="px-4 py-3">Emergency Board-Up</td><td class="px-4 py-3 text-slate-500">Costa Mesa</td><td class="px-4 py-3">Jake Sullivan</td><td class="px-4 py-3">Mar 24</td>
+              <td class="px-4 py-3"><span class="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-semibold">Completed</span></td>
+              <td class="px-4 py-3 text-right font-medium">$950</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4515</td><td class="px-4 py-3">Westfield Mall</td><td class="px-4 py-3">Mold Remediation</td><td class="px-4 py-3 text-slate-500">Mission Viejo</td><td class="px-4 py-3">Chris Park, Luis Ortega</td><td class="px-4 py-3">Mar 20-24</td>
+              <td class="px-4 py-3"><span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-xs font-semibold">Invoiced</span></td>
+              <td class="px-4 py-3 text-right font-medium">$4,100</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4516</td><td class="px-4 py-3">Chen Family</td><td class="px-4 py-3">Water Damage</td><td class="px-4 py-3 text-slate-500">Anaheim</td><td class="px-4 py-3">Jake Sullivan</td><td class="px-4 py-3">Mar 18-22</td>
+              <td class="px-4 py-3"><span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-xs font-semibold">Invoiced</span></td>
+              <td class="px-4 py-3 text-right font-medium">$5,800</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4517</td><td class="px-4 py-3">Bayside Church</td><td class="px-4 py-3">Fire & Smoke</td><td class="px-4 py-3 text-slate-500">Huntington Beach</td><td class="px-4 py-3">Full Crew</td><td class="px-4 py-3">Mar 10-20</td>
+              <td class="px-4 py-3"><span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-xs font-semibold">Invoiced</span></td>
+              <td class="px-4 py-3 text-right font-medium">$11,200</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="px-4 py-3"><input type="checkbox" class="rounded border-slate-300 text-green-600"/></td>
+              <td class="px-4 py-3 font-semibold">JOB-4518</td><td class="px-4 py-3">Martinez Residence</td><td class="px-4 py-3">Structural Drying</td><td class="px-4 py-3 text-slate-500">Fullerton</td><td class="px-4 py-3">Luis Ortega</td><td class="px-4 py-3">Mar 22-24</td>
+              <td class="px-4 py-3"><span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full text-xs font-semibold">Invoiced</span></td>
+              <td class="px-4 py-3 text-right font-medium">$1,700</td><td class="px-4 py-3"><a href="admin-job-detail.html" class="text-green-600 hover:underline font-medium">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="p-4 border-t border-slate-200 flex justify-between items-center text-sm text-slate-500">
+        <span>Showing 1-21 of 21 jobs</span>
+        <div class="flex gap-1">
+          <button class="px-3 py-1 rounded bg-green-600 text-white font-medium">1</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body></html>

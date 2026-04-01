@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Jobs | Coastal Restoration Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<style>body{font-family:'Inter',system-ui,sans-serif;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+<nav class="bg-slate-700 text-white shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6"><div class="flex justify-between items-center h-16">
+    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400" style="font-variation-settings:'FILL' 1;">water_damage</span><span class="font-bold text-lg tracking-tight">Coastal Restoration Services</span></div>
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="index.html" class="text-slate-300 hover:text-white">Book Service</a>
+      <a href="status.html" class="text-slate-300 hover:text-white">Job Status</a>
+      <a href="portal-dashboard.html" class="text-white border-b-2 border-green-400 pb-1">My Portal</a>
+      <a href="portal-history.html" class="text-slate-300 hover:text-white">History</a>
+      <div class="flex items-center gap-2 ml-4 pl-4 border-l border-slate-500">
+        <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-sm font-bold">JH</div>
+        <span class="text-sm">John Henderson</span>
+      </div>
+    </div>
+  </div></div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 py-8">
+  <div class="flex justify-between items-center mb-8">
+    <div>
+      <h1 class="text-2xl font-extrabold text-slate-800">Welcome back, John</h1>
+      <p class="text-slate-500">Here's an overview of your restoration projects.</p>
+    </div>
+    <a href="index.html" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2">
+      <span class="material-symbols-outlined text-lg">add</span> New Service Request
+    </a>
+  </div>
+
+  <!-- Stats Row -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+      <div class="flex items-center gap-3"><div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-yellow-600">construction</span></div>
+      <div><div class="text-2xl font-extrabold">1</div><div class="text-xs text-slate-500 uppercase font-medium">Active Job</div></div></div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+      <div class="flex items-center gap-3"><div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-blue-600">event</span></div>
+      <div><div class="text-2xl font-extrabold">0</div><div class="text-xs text-slate-500 uppercase font-medium">Scheduled</div></div></div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+      <div class="flex items-center gap-3"><div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-green-600">check_circle</span></div>
+      <div><div class="text-2xl font-extrabold">3</div><div class="text-xs text-slate-500 uppercase font-medium">Completed</div></div></div>
+    </div>
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+      <div class="flex items-center gap-3"><div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center"><span class="material-symbols-outlined text-slate-600">receipt_long</span></div>
+      <div><div class="text-2xl font-extrabold">$12,400</div><div class="text-xs text-slate-500 uppercase font-medium">Total Spend</div></div></div>
+    </div>
+  </div>
+
+  <!-- Active Job -->
+  <div class="mb-8">
+    <h2 class="font-bold text-lg mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-yellow-600">construction</span> Active Job</h2>
+    <a href="portal-detail.html" class="block bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow overflow-hidden">
+      <div class="p-6">
+        <div class="flex justify-between items-start mb-4 flex-wrap gap-2">
+          <div>
+            <div class="text-xs text-slate-500 font-medium">JOB-4501</div>
+            <div class="text-xl font-bold mt-1">Water Damage Restoration</div>
+            <div class="text-sm text-slate-500 mt-1">1847 Oak St, Anaheim, CA</div>
+          </div>
+          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">In Progress</span>
+        </div>
+        <!-- Progress bar -->
+        <div class="mb-4">
+          <div class="flex justify-between text-xs text-slate-500 mb-1"><span>Progress</span><span>65%</span></div>
+          <div class="w-full bg-slate-100 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width:65%"></div></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <div><span class="text-slate-500">Lead Tech:</span> <span class="font-medium">Jake Sullivan</span></div>
+          <div><span class="text-slate-500">Started:</span> <span class="font-medium">Mar 28</span></div>
+          <div><span class="text-slate-500">Est. Complete:</span> <span class="font-medium">Mar 31</span></div>
+          <div><span class="text-slate-500">Amount:</span> <span class="font-medium">$5,200</span></div>
+        </div>
+      </div>
+      <div class="bg-green-50 px-6 py-3 text-sm text-green-700 font-medium flex items-center gap-2">
+        <span class="material-symbols-outlined text-lg">info</span>
+        Latest update: Moisture levels dropping. Bathroom now at 42%. Equipment running 24/7.
+      </div>
+    </a>
+  </div>
+
+  <!-- Upcoming Scheduled -->
+  <div class="mb-8">
+    <h2 class="font-bold text-lg mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-blue-600">event</span> Upcoming Scheduled</h2>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 text-center text-slate-400">
+      <span class="material-symbols-outlined text-4xl mb-2">event_busy</span>
+      <p>No upcoming services scheduled.</p>
+      <a href="index.html" class="text-green-600 font-medium text-sm hover:underline mt-2 inline-block">Book a new service</a>
+    </div>
+  </div>
+
+  <!-- Recent Completed -->
+  <div>
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="font-bold text-lg flex items-center gap-2"><span class="material-symbols-outlined text-green-600">check_circle</span> Recently Completed</h2>
+      <a href="portal-history.html" class="text-green-600 font-medium text-sm hover:underline">View All History</a>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <table class="w-full text-sm">
+        <thead class="bg-slate-50 border-b border-slate-200">
+          <tr>
+            <th class="text-left px-6 py-3 font-semibold text-slate-600">Job #</th>
+            <th class="text-left px-6 py-3 font-semibold text-slate-600">Service</th>
+            <th class="text-left px-6 py-3 font-semibold text-slate-600">Date</th>
+            <th class="text-left px-6 py-3 font-semibold text-slate-600">Amount</th>
+            <th class="text-left px-6 py-3 font-semibold text-slate-600">Status</th>
+            <th class="text-left px-6 py-3 font-semibold text-slate-600"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-slate-100 hover:bg-slate-50">
+            <td class="px-6 py-4 font-medium">JOB-4389</td>
+            <td class="px-6 py-4">Mold Remediation</td>
+            <td class="px-6 py-4 text-slate-500">Jan 15-18, 2026</td>
+            <td class="px-6 py-4 font-medium">$3,200</td>
+            <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">Completed</span></td>
+            <td class="px-6 py-4"><button class="text-green-600 hover:underline text-sm font-medium">View</button></td>
+          </tr>
+          <tr class="border-b border-slate-100 hover:bg-slate-50">
+            <td class="px-6 py-4 font-medium">JOB-4256</td>
+            <td class="px-6 py-4">Water Damage Restoration</td>
+            <td class="px-6 py-4 text-slate-500">Oct 5-9, 2025</td>
+            <td class="px-6 py-4 font-medium">$4,800</td>
+            <td class="px-6 py-4"><span class="bg-slate-100 text-slate-600 px-2 py-1 rounded-full text-xs font-semibold">Invoiced</span></td>
+            <td class="px-6 py-4"><button class="text-green-600 hover:underline text-sm font-medium">View</button></td>
+          </tr>
+          <tr class="hover:bg-slate-50">
+            <td class="px-6 py-4 font-medium">JOB-4102</td>
+            <td class="px-6 py-4">Emergency Board-Up</td>
+            <td class="px-6 py-4 text-slate-500">Jul 22, 2025</td>
+            <td class="px-6 py-4 font-medium">$950</td>
+            <td class="px-6 py-4"><span class="bg-slate-100 text-slate-600 px-2 py-1 rounded-full text-xs font-semibold">Invoiced</span></td>
+            <td class="px-6 py-4"><button class="text-green-600 hover:underline text-sm font-medium">View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-slate-800 text-slate-400 py-8 mt-16">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400" style="font-variation-settings:'FILL' 1;">water_damage</span><span class="font-bold text-white">Coastal Restoration Services</span></div>
+    <div class="text-sm">Serving Orange County, CA | Licensed & Insured | IICRC Certified</div>
+    <div class="text-sm">Powered by <span class="text-green-400 font-semibold">ETI Technology</span></div>
+  </div>
+</footer>
+</body></html>

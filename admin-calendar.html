@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Calendar | Coastal Restoration Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<style>body{font-family:'Inter',system-ui,sans-serif;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}.cal-cell{min-height:120px;}</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<nav class="bg-slate-800 text-white shadow-lg fixed top-0 w-full z-50">
+  <div class="px-4 sm:px-6"><div class="flex justify-between items-center h-14">
+    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400" style="font-variation-settings:'FILL' 1;">water_damage</span><span class="font-bold text-lg tracking-tight">Coastal Restoration</span><span class="text-xs bg-green-600 px-2 py-0.5 rounded-full ml-2 font-medium">ADMIN</span></div>
+    <div class="flex items-center gap-4"><a href="index.html" class="text-slate-400 hover:text-white text-sm">Public Site</a><div class="flex items-center gap-2 ml-2 pl-4 border-l border-slate-600"><div class="w-8 h-8 bg-slate-600 rounded-full flex items-center justify-center text-sm font-bold">MB</div></div></div>
+  </div></div>
+</nav>
+<div class="flex pt-14">
+  <aside class="w-56 bg-slate-800 text-slate-300 min-h-screen fixed left-0 top-14 overflow-y-auto pb-8">
+    <nav class="p-3 space-y-1 text-sm">
+      <a href="admin-home.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">dashboard</span>Dashboard</a>
+      <a href="admin-kanban.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">view_kanban</span>Job Board</a>
+      <a href="admin-jobs.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">list_alt</span>Jobs List</a>
+      <a href="admin-job-detail.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">assignment</span>Job Detail</a>
+      <a href="admin-crew.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">groups</span>Crew</a>
+      <a href="admin-equipment.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">handyman</span>Equipment</a>
+      <a href="admin-calendar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-slate-700 text-white font-medium"><span class="material-symbols-outlined text-lg">calendar_month</span>Calendar</a>
+      <a href="admin-analytics.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">analytics</span>Analytics</a>
+    </nav>
+  </aside>
+
+  <main class="ml-56 flex-1 p-6 min-h-screen">
+    <div class="flex justify-between items-center mb-6">
+      <div><h1 class="text-2xl font-extrabold">Scheduling Calendar</h1><p class="text-slate-500 text-sm">Week of March 30 - April 5, 2026</p></div>
+      <div class="flex gap-2 items-center">
+        <button class="bg-white border border-slate-200 text-slate-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-100"><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+        <button class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium">Today</button>
+        <button class="bg-white border border-slate-200 text-slate-700 px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-100"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+        <select class="px-3 py-2 rounded-lg bg-white border border-slate-200 text-sm font-medium ml-2"><option>Week View</option><option>Day View</option><option>Month View</option></select>
+      </div>
+    </div>
+
+    <!-- Crew Legend -->
+    <div class="flex gap-4 mb-4 text-xs font-medium">
+      <span class="flex items-center gap-1"><span class="w-3 h-3 bg-green-500 rounded-full"></span> Jake Sullivan</span>
+      <span class="flex items-center gap-1"><span class="w-3 h-3 bg-blue-500 rounded-full"></span> Chris Park</span>
+      <span class="flex items-center gap-1"><span class="w-3 h-3 bg-orange-500 rounded-full"></span> Luis Ortega</span>
+      <span class="flex items-center gap-1"><span class="w-3 h-3 bg-purple-500 rounded-full"></span> Full Crew</span>
+    </div>
+
+    <!-- Weekly Calendar -->
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="grid grid-cols-8 border-b border-slate-200">
+        <div class="p-3 text-xs font-semibold text-slate-500 border-r border-slate-200 bg-slate-50">Crew</div>
+        <div class="p-3 text-center border-r border-slate-200 bg-yellow-50"><div class="text-xs font-semibold text-slate-500">MON</div><div class="text-lg font-extrabold">30</div></div>
+        <div class="p-3 text-center border-r border-slate-200 bg-yellow-50"><div class="text-xs font-semibold text-slate-500">TUE</div><div class="text-lg font-extrabold">31</div><div class="text-[10px] text-green-600 font-semibold">TODAY</div></div>
+        <div class="p-3 text-center border-r border-slate-200"><div class="text-xs font-semibold text-slate-500">WED</div><div class="text-lg font-extrabold">1</div></div>
+        <div class="p-3 text-center border-r border-slate-200"><div class="text-xs font-semibold text-slate-500">THU</div><div class="text-lg font-extrabold">2</div></div>
+        <div class="p-3 text-center border-r border-slate-200"><div class="text-xs font-semibold text-slate-500">FRI</div><div class="text-lg font-extrabold">3</div></div>
+        <div class="p-3 text-center border-r border-slate-200"><div class="text-xs font-semibold text-slate-500">SAT</div><div class="text-lg font-extrabold">4</div></div>
+        <div class="p-3 text-center"><div class="text-xs font-semibold text-slate-500">SUN</div><div class="text-lg font-extrabold">5</div></div>
+      </div>
+
+      <!-- Jake Sullivan Row -->
+      <div class="grid grid-cols-8 border-b border-slate-200">
+        <div class="p-3 border-r border-slate-200 bg-slate-50"><div class="flex items-center gap-2"><div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white text-[10px] font-bold">JS</div><span class="text-xs font-semibold">Jake S.</span></div></div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 rounded px-2 py-1 text-xs mb-1"><div class="font-semibold">4501 Henderson</div><div class="text-yellow-700">Water &bull; Anaheim</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4501 Henderson</div><div class="text-yellow-700">Final check</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-purple-100 border-l-4 border-purple-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4503 Pacific Prop</div><div class="text-purple-700">Mold &bull; Irvine</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-purple-100 border-l-4 border-purple-500 rounded px-2 py-1 text-xs mb-1"><div class="font-semibold">4503 Pacific Prop</div><div class="text-purple-700">Day 2</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-purple-100 border-l-4 border-purple-500 rounded px-2 py-1 text-xs mb-1"><div class="font-semibold">4506 Dr. Nguyen</div><div class="text-purple-700">Contents &bull; Irvine</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-purple-100 border-l-4 border-purple-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4508 Brightfield</div><div class="text-purple-700">Water &bull; Anaheim</div></div>
+        </div>
+        <div class="p-2 cal-cell bg-slate-50"><div class="text-xs text-slate-400 text-center mt-4">Off</div></div>
+      </div>
+
+      <!-- Chris Park Row -->
+      <div class="grid grid-cols-8 border-b border-slate-200">
+        <div class="p-3 border-r border-slate-200 bg-slate-50"><div class="flex items-center gap-2"><div class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center text-white text-[10px] font-bold">CP</div><span class="text-xs font-semibold">Chris P.</span></div></div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4502 Coastal Cafe</div><div class="text-yellow-700">Fire &bull; Costa Mesa</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4502 Coastal Cafe</div><div class="text-yellow-700">Cont.</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 rounded px-2 py-1 text-xs mb-1"><div class="font-semibold">4502 Coastal Cafe</div><div class="text-yellow-700">Cont.</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-purple-100 border-l-4 border-purple-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4505 Oceanview HOA</div><div class="text-purple-700">Water &bull; Newport</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-purple-100 border-l-4 border-purple-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4505 Oceanview HOA</div><div class="text-purple-700">Day 2</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-purple-100 border-l-4 border-purple-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4508 Brightfield</div><div class="text-purple-700">Water &bull; Anaheim</div></div>
+        </div>
+        <div class="p-2 cal-cell bg-slate-50"><div class="text-xs text-slate-400 text-center mt-4">Off</div></div>
+      </div>
+
+      <!-- Luis Ortega Row -->
+      <div class="grid grid-cols-8">
+        <div class="p-3 border-r border-slate-200 bg-slate-50"><div class="flex items-center gap-2"><div class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-[10px] font-bold">LO</div><span class="text-xs font-semibold">Luis O.</span></div></div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 rounded px-2 py-1 text-xs mb-1"><div class="font-semibold">4507 Torres</div><div class="text-yellow-700">Drying &bull; Fullerton</div></div>
+          <div class="bg-yellow-100 border-l-4 border-yellow-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4502 Coastal Cafe</div><div class="text-yellow-700">Support</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-blue-100 border-l-4 border-blue-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4504 Mitchell</div><div class="text-blue-700">Board-Up &bull; HB</div></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-green-50 rounded px-2 py-1 text-xs text-center mt-4"><span class="text-green-600 font-semibold">Available</span></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-green-50 rounded px-2 py-1 text-xs text-center mt-4"><span class="text-green-600 font-semibold">Available</span></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-green-50 rounded px-2 py-1 text-xs text-center mt-4"><span class="text-green-600 font-semibold">Available</span></div>
+        </div>
+        <div class="p-2 border-r border-slate-200 cal-cell">
+          <div class="bg-purple-100 border-l-4 border-purple-500 rounded px-2 py-1 text-xs"><div class="font-semibold">4509 Kim Res.</div><div class="text-purple-700">Mold &bull; MV</div></div>
+        </div>
+        <div class="p-2 cal-cell bg-slate-50"><div class="text-xs text-slate-400 text-center mt-4">Off</div></div>
+      </div>
+    </div>
+
+    <!-- Upcoming Big Jobs -->
+    <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <h3 class="font-bold mb-4">Upcoming Large Jobs</h3>
+      <div class="space-y-3">
+        <div class="flex items-center justify-between p-3 bg-purple-50 rounded-lg">
+          <div><span class="font-semibold">JOB-4510 &mdash; Summit Logistics</span><span class="text-sm text-slate-500 ml-2">Fire & Smoke Cleanup</span></div>
+          <div class="text-sm"><span class="text-slate-500">Apr 7-17</span><span class="mx-2">&bull;</span><span class="font-semibold text-green-600">$12,500</span><span class="mx-2">&bull;</span><span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-xs font-medium">Full Crew</span></div>
+        </div>
+        <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+          <div><span class="font-semibold">JOB-4508 &mdash; Brightfield Apts</span><span class="text-sm text-slate-500 ml-2">Water Damage</span></div>
+          <div class="text-sm"><span class="text-slate-500">Apr 4-8</span><span class="mx-2">&bull;</span><span class="font-semibold text-green-600">$7,500</span><span class="mx-2">&bull;</span><span class="text-slate-600">Chris + Jake</span></div>
+        </div>
+        <div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+          <div><span class="font-semibold">JOB-4505 &mdash; Oceanview HOA</span><span class="text-sm text-slate-500 ml-2">Water Damage</span></div>
+          <div class="text-sm"><span class="text-slate-500">Apr 2-5</span><span class="mx-2">&bull;</span><span class="font-semibold text-green-600">$6,100</span><span class="mx-2">&bull;</span><span class="text-slate-600">Chris Park</span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body></html>

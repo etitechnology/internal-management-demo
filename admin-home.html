@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard | Coastal Restoration Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+<style>body{font-family:'Inter',system-ui,sans-serif;}.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+<!-- Admin Top Bar -->
+<nav class="bg-slate-800 text-white shadow-lg fixed top-0 w-full z-50">
+  <div class="px-4 sm:px-6"><div class="flex justify-between items-center h-14">
+    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-green-400" style="font-variation-settings:'FILL' 1;">water_damage</span><span class="font-bold text-lg tracking-tight">Coastal Restoration</span><span class="text-xs bg-green-600 px-2 py-0.5 rounded-full ml-2 font-medium">ADMIN</span></div>
+    <div class="flex items-center gap-4">
+      <a href="index.html" class="text-slate-400 hover:text-white text-sm">Public Site</a>
+      <button class="relative p-2 text-slate-400 hover:text-white"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span></button>
+      <div class="flex items-center gap-2 ml-2 pl-4 border-l border-slate-600"><div class="w-8 h-8 bg-slate-600 rounded-full flex items-center justify-center text-sm font-bold">MB</div><span class="text-sm hidden sm:inline">Mike Brennan</span></div>
+    </div>
+  </div></div>
+</nav>
+
+<div class="flex pt-14">
+  <!-- Sidebar -->
+  <aside class="w-56 bg-slate-800 text-slate-300 min-h-screen fixed left-0 top-14 overflow-y-auto pb-8">
+    <nav class="p-3 space-y-1 text-sm">
+      <a href="admin-home.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-slate-700 text-white font-medium"><span class="material-symbols-outlined text-lg">dashboard</span>Dashboard</a>
+      <a href="admin-kanban.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">view_kanban</span>Job Board</a>
+      <a href="admin-jobs.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">list_alt</span>Jobs List</a>
+      <a href="admin-job-detail.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">assignment</span>Job Detail</a>
+      <a href="admin-crew.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">groups</span>Crew</a>
+      <a href="admin-equipment.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">handyman</span>Equipment</a>
+      <a href="admin-calendar.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">calendar_month</span>Calendar</a>
+      <a href="admin-analytics.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-700 hover:text-white"><span class="material-symbols-outlined text-lg">analytics</span>Analytics</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="ml-56 flex-1 p-6 min-h-screen">
+    <div class="flex justify-between items-center mb-6">
+      <div><h1 class="text-2xl font-extrabold">Operations Dashboard</h1><p class="text-slate-500 text-sm">Monday, March 31, 2026 &mdash; Good morning, Mike</p></div>
+      <div class="flex gap-2">
+        <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-1"><span class="material-symbols-outlined text-lg">add</span> New Job</button>
+        <button class="bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-100 flex items-center gap-1"><span class="material-symbols-outlined text-lg">download</span> Export</button>
+      </div>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="flex items-center justify-between mb-2"><span class="text-xs text-slate-500 uppercase font-semibold">Jobs Today</span><span class="material-symbols-outlined text-green-600">today</span></div>
+        <div class="text-3xl font-extrabold">9</div>
+        <div class="text-xs text-slate-500 mt-1">4 scheduled &bull; 3 in progress &bull; 2 completed</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="flex items-center justify-between mb-2"><span class="text-xs text-slate-500 uppercase font-semibold">Crews on Field</span><span class="material-symbols-outlined text-blue-600">engineering</span></div>
+        <div class="text-3xl font-extrabold">3<span class="text-lg text-slate-400 font-normal"> / 4</span></div>
+        <div class="text-xs text-slate-500 mt-1">Jake, Chris, Luis deployed</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="flex items-center justify-between mb-2"><span class="text-xs text-slate-500 uppercase font-semibold">Unassigned</span><span class="material-symbols-outlined text-red-500">warning</span></div>
+        <div class="text-3xl font-extrabold text-red-600">3</div>
+        <div class="text-xs text-slate-500 mt-1">Need crew assignment</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="flex items-center justify-between mb-2"><span class="text-xs text-slate-500 uppercase font-semibold">Weekly Revenue</span><span class="material-symbols-outlined text-green-600">payments</span></div>
+        <div class="text-3xl font-extrabold">$18,400</div>
+        <div class="text-xs text-green-600 mt-1 font-medium">+12% vs last week</div>
+      </div>
+    </div>
+
+    <!-- Second row KPIs -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="text-xs text-slate-500 uppercase font-semibold mb-1">Monthly Revenue</div>
+        <div class="text-2xl font-extrabold">$84,700</div>
+        <div class="text-xs text-green-600 font-medium">Mar 2026</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="text-xs text-slate-500 uppercase font-semibold mb-1">Avg Job Value</div>
+        <div class="text-2xl font-extrabold">$4,200</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="text-xs text-slate-500 uppercase font-semibold mb-1">Customer Rating</div>
+        <div class="text-2xl font-extrabold">4.8<span class="text-sm text-slate-400 font-normal"> / 5.0</span></div>
+        <div class="text-xs text-slate-500">127 reviews</div>
+      </div>
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="text-xs text-slate-500 uppercase font-semibold mb-1">Equipment</div>
+        <div class="text-2xl font-extrabold">78%</div>
+        <div class="text-xs text-slate-500">deployed</div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Active Jobs -->
+      <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200">
+        <div class="p-5 border-b border-slate-200 flex justify-between items-center">
+          <h3 class="font-bold">Active Jobs</h3>
+          <a href="admin-jobs.html" class="text-sm text-green-600 font-medium hover:underline">View All</a>
+        </div>
+        <div class="divide-y divide-slate-100">
+          <a href="admin-job-detail.html" class="flex items-center justify-between px-5 py-3 hover:bg-slate-50">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+              <div><div class="font-medium text-sm">JOB-4501 &mdash; Henderson Family</div><div class="text-xs text-slate-500">Water Damage &bull; 1847 Oak St, Anaheim &bull; Jake Sullivan</div></div>
+            </div>
+            <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-xs font-medium">In Progress</span>
+          </a>
+          <div class="flex items-center justify-between px-5 py-3 hover:bg-slate-50">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+              <div><div class="font-medium text-sm">JOB-4502 &mdash; Coastal Cafe LLC</div><div class="text-xs text-slate-500">Fire & Smoke &bull; 892 Harbor Blvd, Costa Mesa &bull; Chris Park, Luis Ortega</div></div>
+            </div>
+            <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-xs font-medium">In Progress</span>
+          </div>
+          <div class="flex items-center justify-between px-5 py-3 hover:bg-slate-50">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+              <div><div class="font-medium text-sm">JOB-4507 &mdash; Mike Torres</div><div class="text-xs text-slate-500">Structural Drying &bull; 3341 Elm St, Fullerton &bull; Luis Ortega</div></div>
+            </div>
+            <span class="bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded text-xs font-medium">In Progress</span>
+          </div>
+          <div class="flex items-center justify-between px-5 py-3 hover:bg-slate-50">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+              <div><div class="font-medium text-sm">JOB-4504 &mdash; Sarah Mitchell</div><div class="text-xs text-slate-500">Emergency Board-Up &bull; 2103 Palm Ave, HB &bull; Luis Ortega</div></div>
+            </div>
+            <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-xs font-medium">Dispatched</span>
+          </div>
+          <div class="flex items-center justify-between px-5 py-3 hover:bg-slate-50">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+              <div><div class="font-medium text-sm">JOB-4503 &mdash; Pacific Properties</div><div class="text-xs text-slate-500">Mold Remediation &bull; 445 Birch Dr, Irvine &bull; Jake Sullivan</div></div>
+            </div>
+            <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-xs font-medium">Scheduled</span>
+          </div>
+          <div class="flex items-center justify-between px-5 py-3 hover:bg-slate-50">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+              <div><div class="font-medium text-sm">JOB-4505 &mdash; Oceanview HOA</div><div class="text-xs text-slate-500">Water Damage &bull; 678 Vista Ln, Newport Beach &bull; Chris Park</div></div>
+            </div>
+            <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-xs font-medium">Scheduled</span>
+          </div>
+          <div class="flex items-center justify-between px-5 py-3 hover:bg-slate-50">
+            <div class="flex items-center gap-3">
+              <span class="w-2 h-2 bg-red-500 rounded-full"></span>
+              <div><div class="font-medium text-sm">JOB-4519 &mdash; Unassigned</div><div class="text-xs text-slate-500">New request &bull; Needs review</div></div>
+            </div>
+            <span class="bg-red-100 text-red-700 px-2 py-0.5 rounded text-xs font-medium">Unassigned</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="space-y-6">
+        <!-- Alerts -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200">
+          <div class="p-5 border-b border-slate-200"><h3 class="font-bold flex items-center gap-2"><span class="material-symbols-outlined text-red-500 text-lg">notifications_active</span> Alerts</h3></div>
+          <div class="divide-y divide-slate-100">
+            <div class="p-4 bg-red-50">
+              <div class="text-sm font-medium text-red-800">3 unassigned jobs need attention</div>
+              <div class="text-xs text-red-600 mt-1">JOB-4519, JOB-4520, JOB-4521</div>
+            </div>
+            <div class="p-4 bg-yellow-50">
+              <div class="text-sm font-medium text-yellow-800">Van #3 maintenance due Apr 20</div>
+              <div class="text-xs text-yellow-600 mt-1">VH-003 assigned to Luis Ortega</div>
+            </div>
+            <div class="p-4">
+              <div class="text-sm font-medium">JOB-4502 invoice pending</div>
+              <div class="text-xs text-slate-500 mt-1">Coastal Cafe &mdash; $9,800 &bull; Est. complete Apr 3</div>
+            </div>
+            <div class="p-4">
+              <div class="text-sm font-medium">4 dehumidifiers available</div>
+              <div class="text-xs text-slate-500 mt-1">Ready for next deployment</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crew Status -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200">
+          <div class="p-5 border-b border-slate-200"><h3 class="font-bold">Crew Status</h3></div>
+          <div class="divide-y divide-slate-100">
+            <div class="p-4 flex items-center justify-between">
+              <div class="flex items-center gap-3"><div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-xs font-bold">JS</div><div><div class="font-medium text-sm">Jake Sullivan</div><div class="text-xs text-slate-500">JOB-4501 &bull; Anaheim</div></div></div>
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            </div>
+            <div class="p-4 flex items-center justify-between">
+              <div class="flex items-center gap-3"><div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">CP</div><div><div class="font-medium text-sm">Chris Park</div><div class="text-xs text-slate-500">JOB-4502 &bull; Costa Mesa</div></div></div>
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            </div>
+            <div class="p-4 flex items-center justify-between">
+              <div class="flex items-center gap-3"><div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white text-xs font-bold">LO</div><div><div class="font-medium text-sm">Luis Ortega</div><div class="text-xs text-slate-500">JOB-4504 &bull; HB (dispatched)</div></div></div>
+              <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+            </div>
+            <div class="p-4 flex items-center justify-between">
+              <div class="flex items-center gap-3"><div class="w-8 h-8 bg-slate-500 rounded-full flex items-center justify-center text-white text-xs font-bold">TR</div><div><div class="font-medium text-sm">Tony Reyes</div><div class="text-xs text-slate-500">Office &mdash; Ops Manager</div></div></div>
+              <span class="w-2 h-2 bg-slate-400 rounded-full"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+          <h3 class="font-bold mb-3">Quick Actions</h3>
+          <div class="grid grid-cols-2 gap-2">
+            <a href="admin-kanban.html" class="flex flex-col items-center p-3 bg-slate-50 rounded-lg hover:bg-slate-100 text-sm font-medium"><span class="material-symbols-outlined text-slate-600 mb-1">view_kanban</span>Job Board</a>
+            <a href="admin-calendar.html" class="flex flex-col items-center p-3 bg-slate-50 rounded-lg hover:bg-slate-100 text-sm font-medium"><span class="material-symbols-outlined text-slate-600 mb-1">calendar_month</span>Schedule</a>
+            <a href="admin-crew.html" class="flex flex-col items-center p-3 bg-slate-50 rounded-lg hover:bg-slate-100 text-sm font-medium"><span class="material-symbols-outlined text-slate-600 mb-1">groups</span>Crews</a>
+            <a href="admin-analytics.html" class="flex flex-col items-center p-3 bg-slate-50 rounded-lg hover:bg-slate-100 text-sm font-medium"><span class="material-symbols-outlined text-slate-600 mb-1">analytics</span>Reports</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body></html>
